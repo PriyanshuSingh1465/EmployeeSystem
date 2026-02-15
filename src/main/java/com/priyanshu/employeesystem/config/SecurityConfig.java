@@ -33,14 +33,14 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-//                        .requestMatchers(
-//                                "/auth/**",
-//                                "/v3/api-docs/**",
-//                                "/swagger-ui/**",
-//                                "/swagger-ui.html",
-//                                "/swagger-resources/**",
-//                                "/webjars/**"
-//                        ).permitAll()
+                        .requestMatchers(
+                                "/auth/**",
+                                "/v3/api-docs/**",
+                                "/swagger-ui/**",
+                                "/swagger-ui.html",
+                                "/swagger-resources/**",
+                                "/webjars/**"
+                        ).permitAll()
                         .anyRequest().authenticated()
                 )
 
@@ -69,7 +69,7 @@ public class SecurityConfig {
 
         CorsConfiguration config = new CorsConfiguration();
 
-        config.setAllowedOrigins(List.of("http://localhost:8080"));
+        config.setAllowedOrigins(List.of("*"));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);

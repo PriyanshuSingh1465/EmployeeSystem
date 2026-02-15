@@ -2,6 +2,7 @@ package com.priyanshu.employeesystem.config;
 
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.security.SecurityRequirement;
 import io.swagger.v3.oas.models.security.SecurityScheme;
@@ -16,7 +17,7 @@ public class OpenApiConfig {
 
         return new OpenAPI()
                 .info(new Info()
-                        .title("Employee Management System API")
+                        .title("Employee Management System API - By Priyanshu Singh")
                         .version("1.0")
                         .description("Spring Boot + JWT + Role-based Authorization"))
                 .addSecurityItem(new SecurityRequirement().addList("Bearer Authentication"))
